@@ -38,7 +38,6 @@
   margin-bottom: 1rem;
 }
 
-/* Screens between 540px and 768px */
 @media (min-width: 540px) and (max-width: 768px) {
   .aboutContainer {
     grid-template-columns: 1fr;
