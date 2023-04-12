@@ -9,18 +9,16 @@ import "react-toastify/dist/ReactToastify.css";
 const BookingForm = () => {
   const [availableTimes, setAvailableTimes] = useState(fetchAPI(new Date()));
 
-  // Form state
   const [date, setDate] = useState("");
   const [time, setTime] = useState(availableTimes[0]);
-  const [guestNum, setGuestsNum] = useState("");
+  const [guestNum, setGuestsNum] = useState(1);
   const [occasion, setOccasion] = useState("Anniversary");
 
-  //  Submit form & redirect user
   const navigate = useNavigate();
-  const { dispatch } = useReservationState();
+  const { dispatch } = useReservationState()
+  ;
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate form fields
     if (!date) {
       toast.error("Please choose a date");
       return;
@@ -37,7 +35,6 @@ const BookingForm = () => {
       toast.error("Please choose an occasion");
       return;
     }
-
     const formData = {
       date,
       time,
@@ -52,7 +49,6 @@ const BookingForm = () => {
     }
   };
 
-  //   Change availability based on choosen date
   useEffect(() => {
     if (date) {
       setAvailableTimes(fetchAPI(new Date(date)));
