@@ -8,6 +8,7 @@
   --font-color: #333;
   --light-gray-color: #edefee;
   --light-orange-color: #fbfabb;
+  --outline-color: #5879dd;
 }
 
 * {
@@ -39,21 +40,21 @@ blockquote {
   margin: 0;
 }
 
-input,
-select {
+input {
   display: block;
   padding: 0.5rem 1rem;
   width: 100%;
   border: 1px solid gray;
-  border-radius: 4px;
   color: var(--font-color);
+  border-radius: 4px;
   font-size: 1.1rem;
-  transition: 0.3s all ease-in-out;
 }
 
 input:focus {
   border: 1px solid var(--font-color);
   color: var(--font-color);
+  outline-color: var(--outline-color);
+  transition: 0.3s;
 }
 
 option {

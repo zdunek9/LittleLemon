@@ -6,7 +6,6 @@ const ConfirmedBooking = () => {
   const {
     state: { formData: reservation },
   } = useReservationState();
-
   return (
     <>
       <Header />
